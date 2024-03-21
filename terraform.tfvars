@@ -1,0 +1,5 @@
+region = "us-east-1"
+cidr_block = "20.20.0.0/16"
+subcidr = "20.20.1.0/24"
+ec2type = "t2.micro"
+ami = "ami-0d7a109bf30624c99"
