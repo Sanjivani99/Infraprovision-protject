@@ -1,11 +1,11 @@
    pipeline {
     agent any
  
-   stages {
-        stage('Download terraform code from Gihub') { 
+ stages {
+        stage('checkout') {
             steps {
-                git credentialsId: 'Sanjivani99/******', url: 'https://github.com/Sanjivani99/Infraprovision-protject.git'
-            }    
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sanjivani99/Infraprovision-protject.git']]])
+            }
         }
         stage('init') {
             steps {
